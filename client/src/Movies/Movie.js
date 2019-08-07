@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Movie = (props) => {
-  const [movie, setMovie] = useState([]);
+  // ASK LARYNA ABOUT WHY DEFAULT STATE NOT BE SET!
+  const [movie, setMovie] = useState(); 
  
   useEffect(() => {
     const id = props.match.params.id;
