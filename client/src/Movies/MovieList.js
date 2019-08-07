@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const MovieList = props => {
-  
+
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
@@ -13,6 +13,7 @@ const MovieList = props => {
         .get('http://localhost:5000/api/movies')
         .then(response => {
           setMovies(response.data);
+          console.log(response);
         })
         .catch(error => {
           console.error('Server Error', error);
@@ -32,9 +33,10 @@ const MovieList = props => {
 }
 
 function MovieDetails({ movie }) {
-  const { title, director, metascore, stars } = movie;
+  const { title, director, metascore, stars } = movie; // ????
   return (
-    <div className="movie-card">
+    <Link to={`/movies/${movie.id}`}>
+      <div className="movie-card">
       <h2>{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
@@ -50,6 +52,8 @@ function MovieDetails({ movie }) {
         </div>
       ))}
     </div>
+    </Link>
+    
   );
 }
 
