@@ -4,7 +4,6 @@ import MovieCard from './MovieCard.js';
 
 const Movie = (props) => {
   console.log(props);
-  // ASK LARYNA ABOUT WHY DEFAULT STATE SHOULD NOT BE SET!
   const [movie, setMovie] = useState(); 
  
   useEffect(() => {
