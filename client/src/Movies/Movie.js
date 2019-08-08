@@ -43,7 +43,7 @@ const Movie = (props) => {
   return (
     <div className="save-wrapper">
       <MovieCard title={title} director={director} metascore={metascore} stars={stars} />
-      <div className="save-button">Save</div>
+      <div onClick={() => {props.clickFunction(movie)} } className="save-button">Save</div>
     </div>
   );
 }
