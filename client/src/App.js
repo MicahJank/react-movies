@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Route } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 
 import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList.js';
@@ -16,6 +16,10 @@ const App = () => {
 
   return (
     <div>
+      <div className='nav-links'>
+      <NavLink exact to={'/'} className="home-button">Home</NavLink>
+      <h1 className='movie-finder'>Movie Finder</h1>
+      </div>
       <SavedList list={savedList} />
       <Route exact path='/' component={ MovieList } />
       <Route path='/movies/:id' render={ props => <Movie { ...props } clickFunction={ addToSavedList } />} />

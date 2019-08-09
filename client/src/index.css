@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+}
 body {
   margin: 0;
   padding: 0;
@@ -72,15 +77,25 @@ body {
 
 .home-button {
   padding: 5px 10px;
-  background-color: lightskyblue;
   text-decoration: none;
-  color: black;
-  margin: 20px;
-  height: 25px;
+  color: rgb(4, 77, 99);
+  font-size: 1.5rem;
 }
 
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightskyblue;
+  padding: 10px 20px;
+}
+
+.movie-finder {
+  color: rgb(5, 58, 75);
 }
