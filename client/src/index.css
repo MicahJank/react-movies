@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+}
 body {
   margin: 0;
   padding: 0;
@@ -30,10 +35,14 @@ body {
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
-  width: 75%;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.saved-list-movies {
+  width: 100%;
 }
 
 .saved-list h3 {
@@ -68,5 +77,25 @@ body {
 
 .home-button {
   padding: 5px 10px;
+  text-decoration: none;
+  color: rgb(4, 77, 99);
+  font-size: 1.5rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: lightskyblue;
+  padding: 10px 20px;
+}
+
+.movie-finder {
+  color: rgb(5, 58, 75);
 }
